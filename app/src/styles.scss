@@ -1,0 +1,113 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+/*
+ |--------------------------------------------------------------------------------
+ | Main
+ |--------------------------------------------------------------------------------
+ */
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*
+ |--------------------------------------------------------------------------------
+ | Native
+ |--------------------------------------------------------------------------------
+ */
+
+button {
+  outline: none !important;
+}
+
+/*
+ |--------------------------------------------------------------------------------
+ | Layout
+ |--------------------------------------------------------------------------------
+ */
+
+.gsm-root {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(270px, 1fr) 2fr;
+  grid-template-areas: "gsm-sidebar gsm-content";
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  &.bp3-dark {
+    background-color: #30404d;
+  }
+}
+
+.gsm-sidebar {
+  grid-area: "gsm-sidebar";
+
+  position: relative;
+  background-color: #394b59;
+  box-shadow: 1px 0 0 rgba(16, 22, 26, 0.4);
+
+  .gsm-sidebar-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 270px;
+    height: 100vh;
+  }
+
+  .gsm-sidebar-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+
+    .gsm-logo {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 10px;
+    }
+
+    .gsm-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+      }
+    }
+  }
+
+  .gsm-sidebar-button {
+    cursor: pointer;
+    padding: 10px 15px 10px 54px;
+
+    .menu-title {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-image: linear-gradient(90deg, rgba(48, 64, 77, 0) 0, #30404d 40%);
+      color: inherit;
+    }
+  }
+
+  .gsm-sidebar-divider {
+    background-image: linear-gradient(90deg, rgba(16, 22, 26, 0) 0, rgba(16, 22, 26, 0.4) 40%);
+    height: 1px;
+    padding: 0;
+  }
+}
+
+.gsm-content {
+  grid-area: "gsm-content";
+
+  .gsm-inner-content {
+    padding: 20px;
+  }
+}

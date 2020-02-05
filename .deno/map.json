@@ -1,0 +1,20 @@
+{
+  "imports": {
+    "fs": "https://deno.land/std/fs/mod.ts",
+    "http": "https://deno.land/std/http/mod.ts",
+    "uuid": "https://deno.land/std/uuid/mod.ts",
+    "ws": "https://deno.land/std/ws/mod.ts",
+
+    "fantastical": "./Services/Fantastical/mod.ts",
+    "socket": "./Services/Socket/mod.ts",
+
+    "helpers": "./Helpers/mod.ts",
+    "lib": "./Lib/mod.ts",
+
+    "character": "./Packages/Character/mod.ts",
+    "items": "./Packages/Items/mod.ts",
+    "skills": "./Packages/Skills/mod.ts",
+    "spells": "./Packages/Spells/mod.ts",
+    "world": "./Packages/World/mod.ts"
+  }
+}

@@ -1,0 +1,32 @@
+import { Attribute } from "../Attributes.ts";
+import { Character } from "../Character.ts";
+import { Skill, SkillResult, SkillModifier } from "./Lib/Skill.ts";
+
+export class Name extends Skill {
+  public static readonly id = "name";
+
+  public readonly type = "name";
+  public readonly name = "Name";
+  public readonly description = "Skill description.";
+  public readonly attribute = {
+    perform: Attribute.Dexterity,
+    outcome: Attribute.Strength
+  };
+
+  public modifier(result: SkillResult, opponent: Character): SkillModifier | undefined {
+    switch (result) {
+      case SkillResult.CRITICAL_FAILURE: {
+        return { type: "-", value: 0 };
+      }
+      case SkillResult.FAILURE: {
+        return { type: "-", value: 0 };
+      }
+      case SkillResult.SUCCESS: {
+        return { type: "-", value: 0 };
+      }
+      case SkillResult.CRITICAL_SUCCESS: {
+        return { type: "-", value: 0 };
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "description": "TODO",
+    "ageGroups": {
+      "infant": [0, 2],
+      "child": [3, 12],
+      "teenager": [13, 17],
+      "adult": [18, 45],
+      "midlife": [46, 65],
+      "senior": [66, 78],
+      "elder": [79, 120]
+    }
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "description": "TODO",
+    "ageGroups": {
+      "infant": [0, 1],
+      "child": [2, 10],
+      "teenager": [11, 20],
+      "adult": [21, 120],
+      "midlife": [121, 300],
+      "senior": [301, 600],
+      "elder": [601, 2000]
+    }
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "description": "TODO",
+    "ageGroups": {
+      "infant": [0, 2],
+      "child": [3, 11],
+      "teenager": [12, 17],
+      "adult": [18, 70],
+      "midlife": [71, 180],
+      "senior": [181, 300],
+      "elder": [301, 600]
+    }
+  }
+]

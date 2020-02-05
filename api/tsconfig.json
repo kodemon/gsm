@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "src",
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2017",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "lib": ["es2017"],
+    "paths": {
+      "helpers": ["Helpers/mod.ts"],
+      "lib": ["Lib/mod.ts"],
+
+      "battles": ["Packages/Battles/mod.ts"],
+      "characters": ["Packages/Characters/mod.ts"],
+      "classes": ["Packages/Classes/mod.ts"],
+      "items": ["Packages/Items/mod.ts"],
+      "races": ["Packages/Races/mod.ts"],
+      "skills": ["Packages/Skills/mod.ts"],
+      "spells": ["Packages/Spells/mod.ts"],
+      "world": ["Packages/World/mod.ts"],
+
+      "fantastical": ["Services/Fantastical/mod.ts"],
+      "socket": ["Services/Socket/mod.ts"]
+    }
+  },
+  "include": ["src"]
+}

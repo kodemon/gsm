@@ -1,0 +1,314 @@
+[
+  {
+    "id": "b248f753-fd64-4c53-b72e-ee72b9f0509e",
+    "race": "dwarf",
+    "class": "barbarian",
+    "name": "Borda",
+    "gender": "female",
+    "dateOfBirth": {
+      "year": 2962,
+      "month": 12,
+      "day": 15
+    },
+    "attributes": {
+      "strength": 16,
+      "constitution": 15,
+      "dexterity": 13,
+      "intelligence": 11,
+      "wisdom": 14,
+      "charisma": 4
+    },
+    "experience": 20155,
+    "status": "idle",
+    "health": {
+      "total": 135,
+      "current": 135
+    },
+    "mana": {
+      "total": 25,
+      "current": 25
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 19382
+      }
+    ]
+  },
+  {
+    "id": "9e8ed63c-1738-43d1-98d4-cd3708a21eb5",
+    "race": "elf",
+    "class": "barbarian",
+    "name": "Nineddil",
+    "gender": "male",
+    "dateOfBirth": {
+      "year": 2913,
+      "month": 6,
+      "day": 1
+    },
+    "attributes": {
+      "strength": 17,
+      "constitution": 11,
+      "dexterity": 14,
+      "intelligence": 14,
+      "wisdom": 12,
+      "charisma": 11
+    },
+    "experience": 20124,
+    "status": "idle",
+    "health": {
+      "total": 147,
+      "current": 147
+    },
+    "mana": {
+      "total": 26,
+      "current": 26
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 17723
+      }
+    ]
+  },
+  {
+    "id": "00306ad1-f8c3-4e8c-938d-be3f1572abc0",
+    "race": "elf",
+    "class": "barbarian",
+    "name": "Erlinwen",
+    "gender": "female",
+    "dateOfBirth": {
+      "year": 2982,
+      "month": 10,
+      "day": 28
+    },
+    "attributes": {
+      "strength": 15,
+      "constitution": 12,
+      "dexterity": 14,
+      "intelligence": 11,
+      "wisdom": 12,
+      "charisma": 8
+    },
+    "experience": 20268,
+    "status": "idle",
+    "health": {
+      "total": 136,
+      "current": 136
+    },
+    "mana": {
+      "total": 23,
+      "current": 23
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 18602
+      }
+    ]
+  },
+  {
+    "id": "caf7b94a-0d55-4e16-a217-1814958181c9",
+    "race": "dwarf",
+    "class": "barbarian",
+    "name": "Navi",
+    "gender": "male",
+    "dateOfBirth": {
+      "year": 2960,
+      "month": 12,
+      "day": 22
+    },
+    "attributes": {
+      "strength": 14,
+      "constitution": 16,
+      "dexterity": 13,
+      "intelligence": 12,
+      "wisdom": 14,
+      "charisma": 9
+    },
+    "experience": 20061,
+    "status": "idle",
+    "health": {
+      "total": 139,
+      "current": 139
+    },
+    "mana": {
+      "total": 26,
+      "current": 26
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 19938
+      }
+    ]
+  },
+  {
+    "id": "7399770c-ef6e-4e99-a5dc-d0281efaae85",
+    "race": "dwarf",
+    "class": "barbarian",
+    "name": "Hrari",
+    "gender": "male",
+    "dateOfBirth": {
+      "year": 2992,
+      "month": 5,
+      "day": 28
+    },
+    "attributes": {
+      "strength": 16,
+      "constitution": 16,
+      "dexterity": 12,
+      "intelligence": 11,
+      "wisdom": 14,
+      "charisma": 8
+    },
+    "experience": 20122,
+    "status": "idle",
+    "health": {
+      "total": 154,
+      "current": 154
+    },
+    "mana": {
+      "total": 25,
+      "current": 25
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 17290
+      }
+    ]
+  },
+  {
+    "id": "0b32794d-19a1-4794-bf5b-2154239d80c3",
+    "race": "human",
+    "class": "barbarian",
+    "name": "Bret Minns",
+    "gender": "male",
+    "dateOfBirth": {
+      "year": 2980,
+      "month": 6,
+      "day": 16
+    },
+    "attributes": {
+      "strength": 18,
+      "constitution": 13,
+      "dexterity": 12,
+      "intelligence": 10,
+      "wisdom": 11,
+      "charisma": 9
+    },
+    "experience": 20097,
+    "status": "idle",
+    "health": {
+      "total": 139,
+      "current": 139
+    },
+    "mana": {
+      "total": 21,
+      "current": 21
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 19898
+      }
+    ]
+  },
+  {
+    "id": "21ea96a7-04a4-40c9-9922-e09996ae1522",
+    "race": "dwarf",
+    "class": "barbarian",
+    "name": "Horna",
+    "gender": "female",
+    "dateOfBirth": {
+      "year": 2968,
+      "month": 5,
+      "day": 26
+    },
+    "attributes": {
+      "strength": 17,
+      "constitution": 17,
+      "dexterity": 12,
+      "intelligence": 11,
+      "wisdom": 13,
+      "charisma": 5
+    },
+    "experience": 20410,
+    "status": "idle",
+    "health": {
+      "total": 136,
+      "current": 136
+    },
+    "mana": {
+      "total": 24,
+      "current": 24
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 16056
+      }
+    ]
+  },
+  {
+    "id": "0572bea9-9945-478d-bb13-117b0259bbf3",
+    "race": "human",
+    "class": "barbarian",
+    "name": "Rajesh Lawson",
+    "gender": "male",
+    "dateOfBirth": {
+      "year": 2979,
+      "month": 3,
+      "day": 15
+    },
+    "attributes": {
+      "strength": 16,
+      "constitution": 14,
+      "dexterity": 13,
+      "intelligence": 12,
+      "wisdom": 13,
+      "charisma": 9
+    },
+    "experience": 20033,
+    "status": "idle",
+    "health": {
+      "total": 131,
+      "current": 131
+    },
+    "mana": {
+      "total": 25,
+      "current": 25
+    },
+    "equipment": {
+      "primary": "1h-shortsword"
+    },
+    "skills": [
+      {
+        "id": "sword",
+        "xp": 17732
+      }
+    ]
+  }
+]

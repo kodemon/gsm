@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1h-shortsword",
+    "type": "weapon",
+    "skill": {
+      "type": "sword",
+      "rank": "E"
+    },
+    "rarity": "common",
+    "name": "Shortsword",
+    "description": "Short swords are some of the most common weapons found in any martial society, and thus designs are extremely varied, depending on the region and creator. Most are around 2 feet in length.",
+    "durability": 100,
+    "range": 1,
+    "damage": [1, 6],
+    "critical": {
+      "threat": 18,
+      "multiplier": 2
+    }
+  },
+  {
+    "id": "1h-longsword",
+    "type": "weapon",
+    "skill": {
+      "type": "sword",
+      "rank": "D"
+    },
+    "rarity": "common",
+    "name": "Longsword",
+    "description": "This sword is about 3-1/2 feet in length.",
+    "durability": 100,
+    "range": 1,
+    "damage": [1, 8],
+    "critical": {
+      "threat": 19,
+      "multiplier": 2
+    }
+  },
+  {
+    "id": "1h-katana",
+    "type": "weapon",
+    "skill": {
+      "type": "sword",
+      "rank": "C"
+    },
+    "rarity": "common",
+    "name": "Katana",
+    "description": "Specifically constructed for samurai, katanas employ multiple types of steel combined in a distinctive forging process.",
+    "durability": 80,
+    "range": 1,
+    "damage": [1, 10],
+    "critical": {
+      "threat": 18,
+      "multiplier": 2
+    }
+  },
+  {
+    "id": "1h-bastard-sword",
+    "type": "weapon",
+    "skill": {
+      "type": "sword",
+      "rank": "C"
+    },
+    "rarity": "common",
+    "name": "Bastard sword",
+    "description": "A bastard sword is about 4 feet in length, making it too large to use in one hand without special training; thus, requires a higher skill rank.",
+    "durability": 120,
+    "range": 1,
+    "damage": [1, 10],
+    "critical": {
+      "threat": 18,
+      "multiplier": 2
+    }
+  },
+  {
+    "id": "ranged-shortbow",
+    "type": "weapon",
+    "skill": {
+      "type": "bow",
+      "rank": "E"
+    },
+    "rarity": "common",
+    "name": "Shortbow",
+    "description": "A shortbow is made up of one piece of wood about 3 feet in length.",
+    "durability": 100,
+    "range": 4,
+    "damage": [1, 6],
+    "critical": {
+      "threat": 19,
+      "multiplier": 3
+    }
+  },
+  {
+    "id": "ranged-longbow",
+    "type": "weapon",
+    "skill": {
+      "type": "bow",
+      "rank": "D"
+    },
+    "rarity": "common",
+    "name": "Longbow",
+    "description": "At almost 5 feet in height, a longbow is made up of one solid piece of carefully curved wood.",
+    "durability": 120,
+    "range": 4,
+    "damage": [1, 8],
+    "critical": {
+      "threat": 19,
+      "multiplier": 3
+    }
+  }
+]
