@@ -1,0 +1,286 @@
+[
+  {
+    "id": "fist",
+    "category": "unarmed",
+    "group": "brawling",
+
+    "name": "Fist",
+    "description": "A boney structure covered in meat and wrapped in skin. Can be delivered at high velocities and with great accuracy. Effective when wielded by a skilled individual.",
+
+    "hands": 1,
+    "weight": 0,
+    "price": 0,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d4",
+      "roll": [1, 4]
+    },
+
+    "traits": ["agile", "finesse", "nonlethal", "unarmed"]
+  },
+
+  {
+    "id": "club",
+    "category": "simple",
+    "group": "club",
+
+    "name": "Club",
+    "description": "This is a piece of stout wood shaped or repurposed to bludgeon an enemy. Clubs can be intricately carved pieces of martial art or as simple as a tree branch or piece of wood.",
+
+    "hands": 1,
+    "weight": 2,
+    "price": 0,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d6",
+      "roll": [1, 6]
+    },
+
+    "traits": [["thrown", 10]]
+  },
+  {
+    "id": "dagger",
+    "category": "simple",
+    "group": "knife",
+
+    "name": "Dagger",
+    "description": "This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.",
+
+    "hands": 1,
+    "weight": 1,
+    "price": 1,
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d4",
+      "roll": [1, 4]
+    },
+
+    "traits": ["agile", "finesse", ["thrown", 10], ["versatile", "s"]]
+  },
+  {
+    "id": "mace",
+    "category": "simple",
+    "group": "club",
+
+    "name": "Mace",
+    "description": "With a stout haft and a heavy metal head, a mace is sturdy and allows its wielder to deliver powerful blows and dent armor.",
+
+    "hands": 1,
+    "weight": 4,
+    "price": 1,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d6",
+      "roll": [1, 6]
+    },
+
+    "traits": ["shove"]
+  },
+  {
+    "id": "staff",
+    "category": "simple",
+    "group": "club",
+
+    "name": "Staff",
+    "description": "This long piece of wood can aid in walking and deliver a mighty blow.",
+
+    "hands": 1,
+    "weight": 4,
+    "price": 0,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d6",
+      "roll": [1, 4]
+    },
+
+    "traits": [["two-hand", 8]]
+  },
+  {
+    "id": "spear",
+    "category": "simple",
+    "group": "spear",
+
+    "name": "Spear",
+    "description": "A long metal shaft ending with a metal spike, a spear can be used one-handed as a melee weapon and can be thrown.",
+
+    "hands": 1,
+    "weight": 3,
+    "price": 1,
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d6",
+      "roll": [1, 6]
+    },
+
+    "traits": [["thrown", 20]]
+  },
+
+  {
+    "id": "shortsword",
+    "category": "martial",
+    "group": "sword",
+
+    "name": "Shortsword",
+    "description": "These blades come in a variety of shapes and styles, but they are typically 2 feet long.",
+
+    "hands": 1,
+    "weight": 2,
+    "price": 10,
+
+    "damage": {
+      "type": "percing",
+      "dice": "1d6",
+      "roll": [1, 6]
+    },
+
+    "traits": ["agile", "finesse", ["versatile", "s"]]
+  },
+  {
+    "id": "longsword",
+    "category": "martial",
+    "group": "sword",
+
+    "name": "Longsword",
+    "description": "Longswords can be one-edged or two‑edged swords. Their blades are heavy and they’re between 3 and 4 feet in length.",
+
+    "hands": 1,
+    "weight": 3,
+    "price": 15,
+
+    "damage": {
+      "type": "slashing",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": [["versatile", "p"]]
+  },
+  {
+    "id": "bastard-sword",
+    "category": "martial",
+    "group": "sword",
+
+    "name": "Bastard Sword",
+    "description": "This broad-bladed sword, sometimes called the hand‑and‑a‑half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.",
+
+    "hands": 1,
+    "weight": 4,
+    "price": 20,
+
+    "damage": {
+      "type": "slashing",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": [["two-handed", 12]]
+  },
+  {
+    "id": "greatsword",
+    "category": "martial",
+    "group": "sword",
+
+    "name": "Greatsword",
+    "description": "This immense two-handed sword is nearly as tall as its wielder. Its lower blade is often somewhat dulled to allow it to be gripped for extra leverage in close-quarter fights.",
+
+    "hands": 2,
+    "weight": 6,
+    "price": 50,
+
+    "damage": {
+      "type": "slashing",
+      "dice": "1d12",
+      "roll": [1, 12]
+    },
+
+    "traits": [["versatile", "p"]]
+  },
+
+  {
+    "id": "battle-axe",
+    "category": "martial",
+    "group": "axe",
+
+    "name": "Battle Axe",
+    "description": "These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.",
+
+    "hands": 1,
+    "weight": 4,
+    "price": 10,
+
+    "damage": {
+      "type": "slashing",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": ["sweep"]
+  },
+  {
+    "id": "greataxe",
+    "category": "martial",
+    "group": "axe",
+
+    "name": "Greataxe",
+    "description": "This large battle axe is too heavy to wield with only one hand. Many greataxes incorporate two blades, and they are often “bearded,” having a hook at the bottom to increase the strength of their chopping power.",
+
+    "hands": 2,
+    "weight": 7,
+    "price": 30,
+
+    "damage": {
+      "type": "slashing",
+      "dice": "1d12",
+      "roll": [1, 12]
+    },
+
+    "traits": ["sweep"]
+  },
+
+  {
+    "id": "warhammer",
+    "category": "martial",
+    "group": "hammer",
+
+    "name": "Warhammer",
+    "description": "This weapon has a wooden shaft ending in a large, heavy metal head. The head of the hammer might be single-sided or double-sided, but it’s always capable of delivering powerful bludgeoning blows.",
+
+    "hands": 1,
+    "weight": 2,
+    "price": 15,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": ["shove"]
+  },
+  {
+    "id": "maul",
+    "category": "martial",
+    "group": "hammer",
+
+    "name": "Maul",
+    "description": "Mauls are massive warhammers that must be swung with two hands.",
+
+    "hands": 2,
+    "weight": 10,
+    "price": 10,
+
+    "damage": {
+      "type": "bludgeoning",
+      "dice": "1d12",
+      "roll": [1, 12]
+    },
+
+    "traits": ["shove"]
+  }
+]

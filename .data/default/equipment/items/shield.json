@@ -1,0 +1,13 @@
+[
+  {
+    "id": "shield",
+    "type": "shield",
+
+    "name": "Shield",
+    "description": "A shield is made from wood or metal and is carried in one hand.",
+
+    "ac": 2,
+    "weight": 6,
+    "price": 10
+  }
+]

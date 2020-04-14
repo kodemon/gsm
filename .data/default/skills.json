@@ -1,10 +1,10 @@
 [
   {
-    "id": "dagger",
-    "name": "Dagger",
-    "description": "Ability to perform attack or defensive actions using a dagger.",
-    "tool": ["dagger"],
-    "modifiers": {
+    "id": "knife",
+    "name": "Knife",
+    "description": "Ability to perform offensive actions using a knife.",
+    "tool": ["knife"],
+    "rank": {
       "E": {
         "attack": 1
       },
@@ -36,9 +36,44 @@
   {
     "id": "sword",
     "name": "Sword",
-    "description": "Ability to perform attack or defensive actions using a sword.",
+    "description": "Ability to perform offensive actions using a sword.",
     "tool": ["sword"],
-    "modifiers": {
+    "rank": {
+      "E": {
+        "attack": 1
+      },
+      "D": {
+        "attack": 1,
+        "damage": [1, 3]
+      },
+      "C": {
+        "attack": 2,
+        "damage": [1, 3],
+        "threat": 1
+      },
+      "B": {
+        "attack": 2,
+        "damage": [1, 6],
+        "threat": 1
+      },
+      "A": {
+        "attack": 3,
+        "damage": [1, 8],
+        "threat": 2
+      },
+      "S": {
+        "attack": 4,
+        "damage": [1, 10],
+        "threat": 3
+      }
+    }
+  },
+  {
+    "id": "axe",
+    "name": "Axe",
+    "description": "Ability to perform offensive actions using an axe.",
+    "tool": ["axe"],
+    "rank": {
       "E": {
         "attack": 1
       },
@@ -71,9 +106,9 @@
   {
     "id": "bow",
     "name": "Archery",
-    "description": "Ability to perform attack or defensive actions using a bow.",
-    "tool": ["bow"],
-    "modifiers": {
+    "description": "Ability to perform offensive actions using a bow or crossbow.",
+    "tool": ["bow", "crossbow"],
+    "rank": {
       "E": {
         "attack": 1
       },

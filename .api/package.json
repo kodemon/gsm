@@ -1,0 +1,37 @@
+{
+  "name": "gsm-api",
+  "version": "1.0.0",
+  "description": "Guns, swords, and magic api server.",
+  "main": "index.js",
+  "author": "Christoffer Rødvik",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node-dev --project ./tsconfig.json --files --transpile-only ./src/Main.ts"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/lokijs": "^1.5.3",
+    "@types/ws": "^7.2.1",
+    "fs-extra": "^8.1.0",
+    "lokijs": "^1.5.8",
+    "module-alias": "^2.2.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "uuid": "^3.4.0",
+    "ws": "^7.2.1"
+  },
+  "_moduleAliases": {
+    "helpers": "src/Helpers/mod.ts",
+    "lib": "src/Lib/mod.ts",
+    "battles": "src/Packages/Battles/mod.ts",
+    "characters": "src/Packages/Characters/mod.ts",
+    "classes": "src/Packages/Classes/mod.ts",
+    "items": "src/Packages/Items/mod.ts",
+    "races": "src/Packages/Races/mod.ts",
+    "skills": "src/Packages/Skills/mod.ts",
+    "spells": "src/Packages/Spells/mod.ts",
+    "world": "src/Packages/World/mod.ts",
+    "fantastical": "src/Services/Fantastical/mod.ts",
+    "socket": "src/Services/Socket/mod.ts",
+    "database": "src/Services/Database.ts"
+  }
+}

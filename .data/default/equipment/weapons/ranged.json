@@ -1,0 +1,98 @@
+[
+  {
+    "id": "shortbow",
+    "category": "simple",
+    "group": "bow",
+
+    "name": "Shortbow",
+    "description": "This smaller bow is made of a single piece of wood and favored by skirmishers and cavalry.",
+
+    "hands": 2,
+    "weight": 2,
+    "price": 25,
+
+    "range": 60,
+    "ammunition": "arrow",
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d6",
+      "roll": [1, 6]
+    },
+
+    "traits": [["deadly", 10]]
+  },
+  {
+    "id": "crossbow",
+    "category": "simple",
+    "group": "bow",
+
+    "name": "Crossbow",
+    "description": "This ranged weapon has a bow-like assembly mounted on a handled frame called a tiller. The tiller has a mechanism to lock the bowstring in place, attached to a trigger mechanism that releases the tension and launches a bolt.",
+
+    "hands": 2,
+    "weight": 5,
+    "price": 25,
+
+    "range": 120,
+    "ammunition": "bolt",
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": []
+  },
+
+  {
+    "id": "longbow",
+    "category": "martial",
+    "group": "bow",
+
+    "name": "Longbow",
+    "description": "This 5-foot-tall bow, usually made of a single piece of elm, hickory, or yew, has a powerful draw and is excellent at propelling arrows with great force and at an extreme distance. You must use two hands to fire a longbow, and it can’t be used while mounted.",
+
+    "hands": 2,
+    "weight": 2,
+    "price": 50,
+
+    "range": 100,
+    "ammunition": "arrow",
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d8",
+      "roll": [1, 8]
+    },
+
+    "traits": [
+      ["deadly", 10],
+      ["volley", 30]
+    ]
+  },
+  {
+    "id": "heavy-crossbow",
+    "category": "martial",
+    "group": "bow",
+
+    "name": "Heavy Crossbow",
+    "description": "This large crossbow is harder to load and more substantial than a regular crossbow, but it packs a greater punch.",
+
+    "hands": 2,
+    "weight": 18,
+    "price": 50,
+
+    "range": 120,
+    "ammunition": "bolt",
+
+    "damage": {
+      "type": "piercing",
+      "dice": "1d10",
+      "roll": [1, 10]
+    },
+
+    "traits": []
+  }
+]

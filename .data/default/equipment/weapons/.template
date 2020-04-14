@@ -1,0 +1,25 @@
+[
+  {
+    "id": "",
+    "category": "",
+    "group": "",
+
+    "name": "",
+    "description": "",
+
+    "hands": 1,
+    "weight": 0,
+    "price": 0,
+
+    "range": 60,
+    "ammunition": "arrow",
+
+    "damage": {
+      "type": "",
+      "dice": "",
+      "roll": [0, 0]
+    },
+
+    "traits": []
+  }
+]
