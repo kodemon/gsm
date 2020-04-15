@@ -1,6 +1,7 @@
 import { Battle } from "./Battle";
 import { Character } from "./Character";
 import { Skill } from "./Skill";
+import { skills } from "./Skills";
 import { maybe } from "./Utils";
 
 export class Stratagem {
@@ -60,39 +61,38 @@ export class Stratagem {
    * @param character
    */
   public getTargetAction(strategy: Strategy, character: Character): Action | undefined {
+    let matched = false;
     switch (strategy.modifier) {
       case "<": {
         if (maybe(character, strategy.key, 0) < strategy.value) {
-          return {
-            target: character,
-            skill: strategy.skill
-          };
+          matched = true;
         }
+        break;
       }
       case "<=": {
         if (maybe(character, strategy.key, 0) <= strategy.value) {
-          return {
-            target: character,
-            skill: strategy.skill
-          };
+          matched = true;
         }
+        break;
       }
       case ">": {
         if (maybe(character, strategy.key, 0) > strategy.value) {
-          return {
-            target: character,
-            skill: strategy.skill
-          };
+          matched = true;
         }
+        break;
       }
       case ">=": {
         if (maybe(character, strategy.key, 0) >= strategy.value) {
-          return {
-            target: character,
-            skill: strategy.skill
-          };
+          matched = true;
         }
+        break;
       }
+    }
+    if (matched) {
+      return {
+        target: character,
+        skill: skills.get(strategy.skill)
+      };
     }
   }
 }
@@ -111,7 +111,7 @@ type Strategy = {
   key: string;
   modifier: Modifier;
   value: number;
-  skill: Skill;
+  skill: string;
 };
 
 /**

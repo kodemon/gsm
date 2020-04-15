@@ -5,6 +5,7 @@
     "outDir": "dist",
     "module": "commonjs",
     "target": "es2017",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "removeComments": true,
     "lib": ["es2017"]

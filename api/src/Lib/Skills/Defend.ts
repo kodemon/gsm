@@ -1,4 +1,4 @@
-import { AttributeType, Character } from "../Character";
+import { Character } from "../Character";
 import { Item } from "../Item";
 import { Skill, SkillType } from "../Skill";
 
@@ -12,6 +12,5 @@ export const defend = new Defend({
   id: "defend",
   type: SkillType.Support,
   name: "Defend",
-  description: "Defend a target from incoming attacks.",
-  attribute: AttributeType.Constitution
+  description: "Defend a target from incoming attacks."
 });

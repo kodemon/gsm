@@ -332,7 +332,7 @@ export class Species {
    */
   public human(gender: "male" | "female" = sample(["male", "female"]), allowMultipleNames = getRandomBoolean()): string {
     if (allowMultipleNames) {
-      return `${sample(names.human[gender])} ${sample(names.familyName[sample(["english", "scottish"])])}`;
+      return `${sample(names.human[gender])} ${sample((names as any).familyName[sample(["english", "scottish"])])}`;
     }
     return sample(names.human[gender]);
   }

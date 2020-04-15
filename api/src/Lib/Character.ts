@@ -1,4 +1,6 @@
 import { BattleStatus } from "./Battle";
+import { db, Collection, collection } from "./Data";
+import { SkillState } from "./Skill";
 import { Stratagem } from "./Stratagem";
 import { Gender } from "./Types";
 import { dieRoll } from "./Utils";
@@ -14,9 +16,8 @@ export class Character {
   public name: string;
   public gender: Gender;
   public status: Status;
-  public attributes: Attributes;
   public stratagem: Stratagem;
-  public skills: SkillProficiency[];
+  public skills: SkillState[];
 
   /**
    * Create a new Character instance.
@@ -26,12 +27,72 @@ export class Character {
   constructor(data: CharacterData) {
     this.id = data.id;
     this.name = data.name;
-    this.status = data.status;
     this.gender = data.gender;
-    this.attributes = data.attributes;
+    this.status = data.status;
     this.stratagem = data.stratagem;
     this.skills = data.skills;
   }
+
+  // ### Data
+  // The following is a list of persistence based methods used to store
+  // character data.
+
+  public static async in(id: string[]) {
+    const data = await collection<any>(Collection.Characters)
+      .find({ id: { $in: id } })
+      .toArray();
+    if (data) {
+      return data.map((d) => new Character(d));
+    }
+    return [];
+  }
+
+  /**
+   * Return a character instance by its id.
+   *
+   * @param id - Character id.
+   *
+   * @returns character or undefined
+   */
+  public static async getById(id: string) {
+    const data = await collection<CharacterData>(Collection.Characters).findOne({ id });
+    if (data) {
+      return new this(data);
+    }
+  }
+
+  /**
+   * Save the character state with the persistent data layer.
+   */
+  public async save() {
+    await collection<CharacterData>(Collection.Characters).update(
+      {
+        id: this.id
+      },
+      this.toData(),
+      { upsert: true }
+    );
+  }
+
+  /**
+   * Convert the instance to a JSON data object.
+   *
+   * @returns character data
+   */
+  public toData(): CharacterData {
+    return {
+      id: this.id,
+      name: this.name,
+      gender: this.gender,
+      status: this.status,
+      stratagem: this.stratagem,
+      skills: this.skills
+    };
+  }
+
+  // ### Utilities
+  // The following is a list of utility methods used to check character
+  // state and perform actions.
 
   /**
    * Check if the character is still alive.
@@ -49,7 +110,7 @@ export class Character {
    *
    * @returns skill proficiency, or undefined
    */
-  public skill(id: string): SkillProficiency | undefined {
+  public skill(id: string): SkillState | undefined {
     return this.skills.find((skill) => skill.id === id);
   }
 
@@ -61,11 +122,11 @@ export class Character {
    * @returns initiative roll
    */
   public initiative(modifiers: number[] = []): number {
-    let value = this.attributes.dexterity + dieRoll(20);
+    let roll = dieRoll(20);
     for (const modifier of modifiers) {
-      value += modifier;
+      roll += modifier;
     }
-    return value;
+    return roll;
   }
 }
 
@@ -128,97 +189,6 @@ export class Status {
 
 /*
  |--------------------------------------------------------------------------------
- | Attributes
- |--------------------------------------------------------------------------------
- |
- | Represents the natural abilities of a character.
- |
- | Strength      Measuring physical power and carrying capacity.
- |
- | Constitution  Measuring endurance, stamina and good health.
- |
- | Dexterity     Measuring agility, balance, coordination and reflexes.
- |
- | Intelligence  Measuring deductive reasoning, knowledge, memory, logic and 
- |               rationality.
- |
- | Wisdom        Measuring self-awareness, common sense, restraint, perception 
- |               and insight.
- |
- | Charisma      Measuring force of personality, persuasiveness, leadership and 
- |               successful planning.
- |
- */
-
-export class Attributes {
-  public strength: number;
-  public constitution: number;
-  public dexterity: number;
-  public intelligence: number;
-  public wisdom: number;
-  public charisma: number;
-
-  public static modifiers = [
-    [2, -5],
-    [4, -4],
-    [6, -3],
-    [8, -2],
-    [10, -1],
-    [12, 0],
-    [14, 1],
-    [16, 2],
-    [18, 3],
-    [20, 4],
-    [22, 5],
-    [24, 6],
-    [26, 7],
-    [28, 8],
-    [30, 9]
-  ];
-
-  /**
-   * Create new Attributes instance.
-   *
-   * @param data - Attribute data; Strength, Constitution, Dexterity, Intelligence, Wisdom, Charisma.
-   */
-  constructor(data: AttributesData) {
-    this.strength = data.strength;
-    this.constitution = data.constitution;
-    this.dexterity = data.dexterity;
-    this.intelligence = data.intelligence;
-    this.wisdom = data.wisdom;
-    this.charisma = data.charisma;
-  }
-
-  /**
-   * Get modifier used for various checks based on the attribute value.
-   *
-   * @param attribute - Attribute to get modifier for.
-   *
-   * @returns modifier value
-   */
-  public modifier(attribute: AttributeType): number {
-    const value = this[attribute];
-    for (const [target, modifier] of Attributes.modifiers) {
-      if (value < target) {
-        return modifier;
-      }
-    }
-    return 10;
-  }
-}
-
-export enum AttributeType {
-  Strength = "strength",
-  Constitution = "constitution",
-  Dexterity = "dexterity",
-  Intelligence = "intelligence",
-  Wisdom = "wisdom",
-  Charisma = "charisma"
-}
-
-/*
- |--------------------------------------------------------------------------------
  | Typed
  |--------------------------------------------------------------------------------
  */
@@ -228,9 +198,8 @@ type CharacterData = {
   name: string;
   gender: Gender;
   status: Status;
-  attributes: Attributes;
   stratagem: Stratagem;
-  skills: SkillProficiency[];
+  skills: SkillState[];
 };
 
 type StatusData = {
@@ -241,18 +210,4 @@ type StatusData = {
 type State = {
   total: number;
   current: number;
-};
-
-type AttributesData = {
-  strength: number;
-  constitution: number;
-  dexterity: number;
-  intelligence: number;
-  wisdom: number;
-  charisma: number;
-};
-
-export type SkillProficiency = {
-  id: string;
-  value: number;
 };

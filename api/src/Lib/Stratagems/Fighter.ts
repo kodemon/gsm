@@ -16,6 +16,6 @@ export const fighter = new Stratagem([
     key: "status.health.current",
     modifier: ">",
     value: 0,
-    skill: skills.melee.slash
+    skill: skills.melee.slash.id
   }
 ]);

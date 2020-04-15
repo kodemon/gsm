@@ -6,17 +6,29 @@
   "author": "Christoffer Rødvik",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/.bin/ts-node-dev --project ./tsconfig.json --files --transpile-only ./src/Main.ts",
-    "test": "./node_modules/.bin/ts-node-dev --project ./tsconfig.json --files --transpile-only ./src/Test.ts"
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js",
+    "test": "npm run build && node dist/test.js"
   },
   "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/chalk": "^2.2.0",
     "@types/fs-extra": "8.1.0",
+    "@types/inquirer": "^6.5.0",
     "@types/lokijs": "1.5.3",
+    "@types/mongodb": "^3.5.6",
+    "@types/pluralize": "0.0.29",
     "@types/uuid": "^7.0.2",
     "@types/ws": "7.2.3",
+    "bcrypt": "^4.0.1",
+    "chalk": "^4.0.0",
     "fs-extra": "9.0.0",
+    "inquirer": "^7.1.0",
     "lokijs": "1.5.8",
+    "mongodb": "^3.5.6",
+    "pluralize": "^8.0.0",
     "ts-node-dev": "1.0.0-pre.44",
+    "typescript": "^3.8.3",
     "uuid": "7.0.3",
     "ws": "7.2.3"
   }

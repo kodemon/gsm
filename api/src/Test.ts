@@ -23,3 +23,9 @@ console.log("\nBATTLE RESULT\n=============\n");
 for (const combatant of battle.combatants) {
   console.log(combatant.character.name, " is left with ", combatant.character.status.health.current, " health.");
 }
+
+console.log("\nCHARACTER SHEETS\n================\n");
+
+for (const combatant of battle.combatants) {
+  console.log(combatant.character, "\n");
+}

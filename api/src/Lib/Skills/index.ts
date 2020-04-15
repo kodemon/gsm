@@ -23,16 +23,35 @@ import { slash } from "./Slash";
  */
 
 export const skills = {
-  support: {
-    defend,
-    toArray(): Skill[] {
-      return [defend];
-    }
+  [defend.id]: defend,
+  [slash.id]: slash,
+
+  /**
+   * Get skill by its id.
+   *
+   * @param id - Skill id.
+   *
+   * @returns skill
+   */
+  get(id: string): Skill {
+    return (this as any)[id];
   },
+
+  // ### Category: Melee
+
   melee: {
     slash,
     toArray(): Skill[] {
       return [slash];
+    }
+  },
+
+  // ### Category: Support
+
+  support: {
+    defend,
+    toArray(): Skill[] {
+      return [defend];
     }
   }
 };
