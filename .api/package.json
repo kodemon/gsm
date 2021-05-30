@@ -17,7 +17,7 @@
     "module-alias": "^2.2.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "uuid": "^3.4.0",
-    "ws": "^7.2.1"
+    "ws": "^7.4.6"
   },
   "_moduleAliases": {
     "helpers": "src/Helpers/mod.ts",
